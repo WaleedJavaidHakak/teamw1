@@ -1,0 +1,177 @@
+/*
+ * Premium travel theme layer.
+ * Loaded by the homepage's existing google-reviews.css reference; selectors are
+ * deliberately scoped to existing page/component classes to preserve behavior.
+ */
+:root {
+    --kz-premium-forest: #123f39;
+    --kz-premium-teal: #17675e;
+    --kz-premium-mint: #edf4ef;
+    --kz-premium-gold: #d7b574;
+    --kz-premium-ink: #1d312d;
+    --kz-premium-muted: #74817b;
+    --kz-premium-paper: #fbfaf6;
+    --kz-premium-line: rgba(29, 49, 45, .11);
+    --kz-premium-shadow: 0 16px 42px rgba(18, 63, 57, .11);
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--kz-premium-ink); }
+
+/* Shared editorial heading and section rhythm on the homepage. */
+.kz-about-section,
+.kz-cat-section,
+.kz-cabs-section,
+.kz-dest-section { padding-top: clamp(42px, 6vw, 82px) !important; padding-bottom: clamp(42px, 6vw, 82px) !important; }
+.kz-about-heading,
+.kz-cat-heading,
+.kz-cabs-heading,
+.kz-dest-heading,
+.kz-reason-heading,
+.kz-blog-heading,
+.kz-faq-heading {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -.035em !important;
+    line-height: 1.12 !important;
+}
+.kz-about-eyebrow,
+.kz-cat-eyebrow,
+.kz-cabs-eyebrow,
+.kz-dest-eyebrow { letter-spacing: .16em !important; }
+
+/* Homepage hero / slider: cinematic contrast while retaining the existing slider. */
+.hero-slider-1 .hero-inner::after {
+    background: linear-gradient(90deg, rgba(10, 36, 32, .64), rgba(10, 36, 32, .12) 76%), linear-gradient(0deg, rgba(10, 36, 32, .3), transparent 55%);
+}
+.hero-slider-1 .hero-bg-img { filter: saturate(.9); }
+.hero-slider-1 .slider-arrow { border-color: rgba(255,255,255,.55) !important; }
+.kt-search-bar { border: 1px solid rgba(215,181,116,.8) !important; box-shadow: 0 16px 44px rgba(10,36,32,.24) !important; }
+.kt-s-btn { background: var(--kz-premium-forest) !important; }
+.kt-s-btn:hover { background: var(--kz-premium-teal) !important; }
+
+/* Destination tiles and experience cards. */
+.kz-cat-card,
+.kz-cab-box,
+.kz-glass-card,
+.kz-blog-card,
+.kz-gallery-card,
+.kz-reason-card {
+    border: 1px solid var(--kz-premium-line) !important;
+    box-shadow: 0 8px 26px rgba(18,63,57,.07) !important;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease !important;
+}
+.kz-cat-card:hover,
+.kz-cab-box:hover,
+.kz-glass-card:hover,
+.kz-blog-card:hover,
+.kz-gallery-card:hover,
+.kz-reason-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(39,133,120,.35) !important;
+    box-shadow: var(--kz-premium-shadow) !important;
+}
+.kz-cat-card { padding: 12px !important; border-radius: 20px !important; }
+.kz-cat-img-wrap,
+.kz-cab-media,
+.kz-glass-img-wrap { border-radius: 14px !important; }
+.kz-cat-title a,
+.kz-cab-title a { color: var(--kz-premium-forest) !important; }
+.kz-cat-btn,
+.kz-glass-btn,
+.kz-about-btn-cta { background: var(--kz-premium-forest) !important; }
+.kz-cat-btn:hover,
+.kz-glass-btn:hover,
+.kz-about-btn-cta:hover { background: var(--kz-premium-teal) !important; }
+.kz-cat-btn-arrow,
+.kz-about-btn-icon { background: var(--kz-premium-gold) !important; color: var(--kz-premium-forest) !important; }
+.kz-glass-card { border-radius: 21px !important; }
+.kz-glass-badge { background: var(--kz-premium-gold) !important; color: var(--kz-premium-forest) !important; }
+
+/* Trust, statistics and testimonials. */
+.kz-about-stat-card { border: 1px solid var(--kz-premium-line) !important; border-top: 3px solid var(--kz-premium-teal) !important; border-radius: 14px !important; }
+.kz-about-stat-card:hover { border-top-color: var(--kz-premium-gold) !important; }
+.kz-about-feature-pill { border-radius: 14px !important; }
+.kz-count-box,
+.kz-video-card,
+.kz-faq-card { border-radius: 16px !important; }
+
+/* Header: premium, quiet surface and clear interactive states. */
+.kaw-hdr { z-index: 990 !important; }
+.kaw-hdr-sticky {
+    background: rgba(255,255,255,.97) !important;
+    border-bottom: 1px solid rgba(18,63,57,.11) !important;
+    box-shadow: 0 5px 22px rgba(18,63,57,.06) !important;
+    backdrop-filter: blur(14px);
+}
+.kaw-hdr-sticky::after { height: 2px !important; background: linear-gradient(90deg, var(--kz-premium-teal), var(--kz-premium-gold)) !important; }
+.kaw-hdr-wrap { min-height: 78px !important; }
+.kaw-hdr-logo-area img { max-height: 52px; width: auto; }
+.kaw-nav-link,
+.kaw-nav-link:focus,
+.kaw-nav-link:visited { color: var(--kz-premium-forest) !important; font-weight: 650 !important; }
+.kaw-nav-link:hover,
+.kaw-nav-item.is-open > .kaw-nav-link,
+.kaw-nav-item.is-active > .kaw-nav-link { color: var(--kz-premium-teal) !important; background: var(--kz-premium-mint) !important; border-color: transparent !important; border-radius: 8px !important; }
+.kaw-nav-dropdown,
+.kaw-nav-subdropdown { border-color: var(--kz-premium-line) !important; border-radius: 12px !important; box-shadow: 0 18px 42px rgba(18,63,57,.14) !important; }
+.kaw-hdr-cs-btn { border-radius: 999px !important; }
+.kaw-hdr-burger { border-radius: 10px !important; }
+
+/* Footer trust bar: preserve existing directory, contact, payment and social links. */
+.site-footer,
+.site-footer .footer-logo-section,
+.site-footer .footer-main {
+    color: #fff !important;
+    background: linear-gradient(145deg, #123f39 0%, #0b302c 100%) !important;
+}
+.site-footer { border-top: 2px solid rgba(215,181,116,.58) !important; }
+.site-footer .footer-logo-section { border-bottom-color: rgba(255,255,255,.12) !important; }
+.kz-ftr-brand-badge,
+.kz-ftr-dir-heading { color: #f0d99f !important; }
+.kz-ftr-verified-pill { border-radius: 999px !important; }
+.kz-ftr-cta-primary,
+.kz-ftr-hub-btn-gold { background: var(--kz-premium-gold) !important; color: var(--kz-premium-forest) !important; }
+.kz-ftr-dir-group,
+.kz-ftr-contact-hub,
+.kz-ftr-chip,
+.kz-ftr-gallery-card { border-color: rgba(255,255,255,.13) !important; border-radius: 14px !important; }
+.kz-ftr-dir-group:hover,
+.kz-ftr-chip:hover { border-color: rgba(215,181,116,.5) !important; }
+.kz-ftr-dir-heading { border-left-color: var(--kz-premium-gold) !important; }
+.kz-ftr-dir-list li a:hover { color: #fff !important; }
+.site-footer .footer-bottom { background: #092a27 !important; }
+.kz-ftr-back-top { border-radius: 999px !important; }
+
+/* Tour package styles share the same tokens when this layer is included. */
+.kaw-pkg-card {
+    overflow: hidden;
+    border: 1px solid var(--kz-premium-line) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 25px rgba(18,63,57,.07) !important;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease !important;
+}
+.kaw-pkg-card:hover { transform: translateY(-5px); border-color: rgba(39,133,120,.38) !important; box-shadow: var(--kz-premium-shadow) !important; }
+.kaw-pkg-img-wrap { overflow: hidden; }
+.kaw-pkg-img { transition: transform .6s ease !important; }
+.kaw-pkg-card:hover .kaw-pkg-img { transform: scale(1.055); }
+.kaw-pkg-card .kaw-pkg-bottom { border-radius: 12px !important; }
+.kaw-pkg-btn { border-radius: 999px !important; }
+.th-sort-bar { border: 1px solid var(--kz-premium-line) !important; border-radius: 16px !important; box-shadow: 0 8px 26px rgba(18,63,57,.06) !important; }
+
+@media (max-width: 767.98px) {
+    .kaw-hdr-wrap { min-height: 66px !important; }
+    .kaw-hdr-logo-area img { max-height: 44px; }
+    .kz-about-section,
+    .kz-cat-section,
+    .kz-cabs-section,
+    .kz-dest-section { padding-top: 42px !important; padding-bottom: 42px !important; }
+    .kz-cat-img-wrap,
+    .kz-glass-img-wrap { height: 205px !important; }
+    .site-footer .footer-logo-section { padding: 26px 0 !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
